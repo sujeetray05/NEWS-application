@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalNews | The Intelligence Pulse</title>
+    <meta name="description" content="Premium real-time news aggregator for the modern era.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<script>
+   
+        const saved = localStorage.getItem("color-scheme");
+        if (saved) {
+            document.querySelector('meta[name="color-scheme"]').content = saved;
+            document.documentElement.setAttribute("data-theme", saved);
+        }
+    </script>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span>DevAgency</span>
+            </div>
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Explore the globe...">
+                    <button id="searchBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Global Intelligence. <br>Refined Insights.</h1>
+            <p>Live news streams decoded for clarity and impact.</p>
+        </section>
+
+        <section class="filters-section">
+            <div class="categories" id="categoryFilters">
+                <button class="category-btn active" data-category="general">Global</button>
+                <button class="category-btn" data-category="technology">Technology</button>
+                <button class="category-btn" data-category="business">Finance</button>
+                <button class="category-btn" data-category="science">Science</button>
+                <button class="category-btn" data-category="sports">Sports</button>
+                <button class="category-btn" data-category="entertainment">Lifestyle</button>
+                <button class="category-btn" data-category="health">Health</button>
+            </div>
+        </section>
+
+        <section class="news-container">
+            <div id="loading" class="news-grid hidden">
+                <!-- Skeleton cards -->
+                <div class="skeleton-card skeleton">
+                    <div class="skeleton-img skeleton"></div>
+                    <div class="skeleton-title skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text short skeleton"></div>
+                </div>
+                <div class="skeleton-card skeleton">
+                    <div class="skeleton-img skeleton"></div>
+                    <div class="skeleton-title skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text short skeleton"></div>
+                </div>
+                <div class="skeleton-card skeleton">
+                    <div class="skeleton-img skeleton"></div>
+                    <div class="skeleton-title skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text skeleton"></div>
+                    <div class="skeleton-text short skeleton"></div>
+                </div>
+            </div>
+            
+            <div id="error-message" class="error-container hidden">
+                <div class="empty-state-icon">⚡</div>
+                <p id="error-text">System access interrupted. Please check your credentials.</p>
+                <button id="retryBtn">Restore Connection</button>
+            </div>
+
+            <div id="newsGrid" class="news-grid">
+                <!-- Data injection point -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 GlobalNews Intelligence Hub. Powered by NewsAPI Infrastructure.</p>
+            <p class="user-tag">SUJEET RAY</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
