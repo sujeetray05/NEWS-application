@@ -4,7 +4,7 @@
  */
 
 const CONFIG = {
-    API_KEY: '8aa583c71a6c448099c401a2bbc8f632',
+    API_KEY: 'pub_60d1bc9cd8584c67b66247b47a7307b0',
     BASE_URL: 'https://newsapi.org/v2',
     PAGE_SIZE: 12,
     DEFAULT_IMAGE: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1000'
